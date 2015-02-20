@@ -1,0 +1,39 @@
+{
+  "name": "rdstation-node-client",
+  "version": "1.0.0",
+  "description": "Client wrapper for Node.js integration with RDStation.",
+  "homepage": "https://www.rdstation.com.br/",
+  "author": {
+    "name": "Agendor",
+    "email": "agendor@agendor.com.br",
+    "url": "https://www.agendor.com.br/"
+  },
+  "repository": "agendor/rdstation-node-client",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "rdstation-node-client",
+    "rdstation",
+    "wrapper",
+    "nodejs"
+  ],
+  "dependencies": {
+    "q": "~1.1.2",
+    "superagent": "~0.21.0"
+  },
+  "devDependencies": {
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^1.0.0",
+    "time-grunt": "^1.0.0",
+    "grunt-mocha-cli": "^1.11.0",
+    "jshint-stylish": "^1.0.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  }
+}
