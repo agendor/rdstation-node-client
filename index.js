@@ -1,1 +1,1 @@
-module.exports = require('lib/rdstation');
+module.exports = require('./lib/rdstation');
