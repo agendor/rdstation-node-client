@@ -1,6 +1,6 @@
 {
   "name": "rdstation-node-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client wrapper for Node.js integration with RDStation.",
   "homepage": "https://www.rdstation.com.br/",
   "author": {
