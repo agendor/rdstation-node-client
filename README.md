@@ -53,7 +53,7 @@ return services.dealLost(reason, null, leadId)
 
 ## Future development
 
-Currently, this wrapper just help to make the request "Close a deal and mark a deal as lost" [this article][rd-api-help-deal].
+Currently, this wrapper just help to make the request "Close a deal and mark a deal as lost" described in [this article][rd-api-help-deal].
 
 There are few more possible actions with RD Station API [as described here][rd-api-help-all] like "Send a lead or change a lead state".
 
