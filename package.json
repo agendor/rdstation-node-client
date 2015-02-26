@@ -1,6 +1,6 @@
 {
   "name": "rdstation-node-client",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Client wrapper for Node.js integration with RDStation.",
   "homepage": "https://www.rdstation.com.br/",
   "author": {
@@ -8,11 +8,12 @@
     "email": "agendor@agendor.com.br",
     "url": "https://www.agendor.com.br/"
   },
-  "repository": "agendor/rdstation-node-client",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agendor/rdstation-node-client.git"
+  },
   "license": "MIT",
-  "files": [
-    "index.js"
-  ],
+  "main": "index.js",
   "keywords": [
     "rdstation-node-client",
     "rdstation",
