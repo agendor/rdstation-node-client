@@ -12,16 +12,18 @@ $ npm install --save rdstation-node-client
 
 ## Usage
 
-#### First, initialize the resource
+**First, initialize the resource**
 
-Currently, there is only `Services`.
+Currently, there are `Services` and `Conversions` modules.
 
 ```
 var rdclient = require('rdstation-node-client');
 var services = new rdclient.Services('your_private_token');
 ```
 
-#### Mark a deal as won
+### Services
+
+**Set a deal as won**
 
 ```js
 var value = 120.00;
@@ -36,7 +38,7 @@ return services.dealWon(value, email)
     });
 ```
 
-#### Mark a deal as lost
+**Set a deal as lost**
 
 ```js
 var reason = 'Customer chose competitor product';
@@ -51,9 +53,30 @@ return services.dealLost(reason, null, leadId)
     });
 ```
 
+### Conversions
+
+**Create a new conversion**
+
+```js
+var identifier = 'action-name';
+
+return conversions.createConversion('action-name', {
+    email: 'email@example.com',
+    nome: 'Lead name',
+}).then(function (data) {
+    console.log('Request done ', data);
+})
+.catch(function (err) {
+    console.error(err);
+});
+```
+
 ## Future development
 
-Currently, this wrapper just help to make the request "Close a deal and mark a deal as lost" described in [this article][rd-api-help-deal].
+Currently, this wrapper helps to:
+
+1. Make the request "Close a deal and mark a deal as lost" described in [this article][rd-api-help-deal].
+2. Make the request to create a new conversion as described in [this article][rd-api-help-conversion].
 
 There are few more possible actions with RD Station API [as described here][rd-api-help-all] like "Send a lead or change a lead state".
 
@@ -70,3 +93,4 @@ MIT © [Agendor](https://www.agendor.com.br/)
 [daviddm-image]: https://david-dm.org/agendor/rdstation-node-client
 [rd-api-help-deal]: http://ajuda.rdstation.com.br/hc/pt-br/articles/202640385-Marcar-venda-e-lost-via-formul%C3%A1rio-pr%C3%B3prio-ou-sistema-API-
 [rd-api-help-all]: http://ajuda.rdstation.com.br/hc/pt-br/articles/200310549-Guia-de-integra%C3%A7%C3%B5es-com-o-RD-Station
+[rd-api-help-conversion]: http://ajuda.rdstation.com.br/hc/pt-br/articles/200310589
