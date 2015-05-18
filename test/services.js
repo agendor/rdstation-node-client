@@ -70,38 +70,3 @@ describe('Services', function () {
 		});
 
 });
-
-
-
-
-
-/*
-
-'use strict';
-var assert = require('assert');
-var rdstationNodeClient = require('../');
-var client = require('../lib/rdstation/client.js');
-var nock = require('nock');
-var factory = require('./factory.js')
-
-describe('Services', function () {
-	describe('when a deal is set to won', function () {
-		before(function () {
-			nock(client.baseURL)
-				.post('/conversions', {
-					'token_rdstation': factory.token,
-					'identificador': ''
-				})
-				.reply(201, {
-					ok: true,
-					id: '123ABC',
-					rev: '946B7D1C'
-				});
-		});
-
-	});
-	it('must have at least one test', function () {
-		assert(rdstationNodeClient.Services != null);
-	});
-});
- */
