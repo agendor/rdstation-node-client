@@ -78,7 +78,7 @@ conversions.createConversion('action-name', {
 **Change a lead stage to Lead**
 
 ```js
-var email = 'yourmail@mail.com';
+var email = 'email@example.com';
 var opportunity = false; 
 leads.chageStatusToLead(email, opportunity).then(function (data) {
     console.log('Request done ', data);
@@ -90,7 +90,7 @@ leads.chageStatusToLead(email, opportunity).then(function (data) {
 **Change a lead stage to Lead Qualified**
 
 ```js
-var email = 'yourmail@mail.com';
+var email = 'email@example.com';
 var opportunity = false; 
 leads.chageStatusToQualified(email, opportunity).then(function (data) {
     console.log('Request done ', data);
@@ -103,7 +103,7 @@ leads.chageStatusToQualified(email, opportunity).then(function (data) {
 **Change a lead stage to Client**
 
 ```js
-var email = 'yourmail@mail.com';
+var email = 'email@example.com';
 var opportunity = false; 
 leads.chageStatusToClient(email, opportunity).then(function (data) {
     console.log('Request done ', data);
