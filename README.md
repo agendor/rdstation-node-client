@@ -31,7 +31,7 @@ var leads = new rdclient.Leads('your_private_token');
 var value = 120.00;
 var email = 'email@example.com';
 
-return services.dealWon(value, email)
+services.dealWon(value, email)
     .then(function (data) {
         console.log('Request done ', data);
     })
@@ -46,7 +46,7 @@ return services.dealWon(value, email)
 var reason = 'Customer chose competitor product';
 var leadId = 9999;
 
-return services.dealLost(reason, null, leadId)
+services.dealLost(reason, null, leadId)
     .then(function (data) {
         console.log('Request done ', data);
     })
@@ -62,7 +62,7 @@ return services.dealLost(reason, null, leadId)
 ```js
 var identifier = 'action-name';
 
-return conversions.createConversion('action-name', {
+conversions.createConversion('action-name', {
     email: 'email@example.com',
     nome: 'Lead name',
 }).then(function (data) {
@@ -80,7 +80,7 @@ return conversions.createConversion('action-name', {
 ```js
 var email = 'yourmail@mail.com';
 var opportunity = false; 
-return leads.chageStatusToLead(email, opportunity).then(function (data) {
+leads.chageStatusToLead(email, opportunity).then(function (data) {
     console.log('Request done ', data);
 })
 .catch(function (err) {
@@ -92,7 +92,7 @@ return leads.chageStatusToLead(email, opportunity).then(function (data) {
 ```js
 var email = 'yourmail@mail.com';
 var opportunity = false; 
-return leads.chageStatusToQualified(email, opportunity).then(function (data) {
+leads.chageStatusToQualified(email, opportunity).then(function (data) {
     console.log('Request done ', data);
 })
 .catch(function (err) {
@@ -105,7 +105,7 @@ return leads.chageStatusToQualified(email, opportunity).then(function (data) {
 ```js
 var email = 'yourmail@mail.com';
 var opportunity = false; 
-return leads.chageStatusToClient(email, opportunity).then(function (data) {
+leads.chageStatusToClient(email, opportunity).then(function (data) {
     console.log('Request done ', data);
 })
 .catch(function (err) {
