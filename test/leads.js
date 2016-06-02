@@ -14,13 +14,13 @@ describe('leads', function () {
 					"auth_token": factory.token ,
 					"lead": {
 					"lifecycle_stage": 0,
-					"opportunity": FALSE
-					})
+					"opportunity": false}
+				})
 				.reply(200);
 		});
 
 		it('should call the API with correct parameters', function (done) {
-			var leads = new lib.leads(factory.token);
+			var leads = new lib.Leads(factory.token);
 			leads.changeStatusToLead(factory.lead.email, false)
 				.then(function () {
 					done();
@@ -36,13 +36,13 @@ describe('leads', function () {
 					"auth_token": factory.token ,
 					"lead": {
 					"lifecycle_stage": 0,
-					"opportunity": true
+					"opportunity": true}
 					})
 				.reply(200);
 		});
 
 		it('should call the API with correct parameters', function (done) {
-			var leads = new lib.leads(factory.token);
+			var leads = new lib.Leads(factory.token);
 			leads.changeStatusToLead(factory.lead.email, true)
 				.then(function () {
 					done();
@@ -58,13 +58,13 @@ describe('leads', function () {
 					"auth_token": factory.token ,
 					"lead": {
 					"lifecycle_stage": 1,
-					"opportunity": FALSE
+					"opportunity": false}
 					})
 				.reply(200);
 		});
 
 		it('should call the API with correct parameters', function (done) {
-			var leads = new lib.leads(factory.token);
+			var leads = new lib.Leads(factory.token);
 			leads.changeStatusToQualified(factory.lead.email, false)
 				.then(function () {
 					done();
@@ -80,13 +80,13 @@ describe('leads', function () {
 					"auth_token": factory.token ,
 					"lead": {
 					"lifecycle_stage": 1,
-					"opportunity": true
+					"opportunity": true}
 					})
 				.reply(200);
 		});
 
 		it('should call the API with correct parameters', function (done) {
-			var leads = new lib.leads(factory.token);
+			var leads = new lib.Leads(factory.token);
 			leads.changeStatusToQualified(factory.lead.email, true)
 				.then(function () {
 					done();
@@ -102,14 +102,14 @@ describe('leads', function () {
 					"auth_token": factory.token ,
 					"lead": {
 					"lifecycle_stage": 2,
-					"opportunity": FALSE
+					"opportunity": false}
 					})
 				.reply(200);
 		});
 
 		it('should call the API with correct parameters', function (done) {
-			var leads = new lib.leads(factory.token);
-			leads.changeStatusToQualified(factory.lead.email, false)
+			var leads = new lib.Leads(factory.token);
+			leads.changeStatusToClient(factory.lead.email, false)
 				.then(function () {
 					done();
 				})
@@ -124,14 +124,14 @@ describe('leads', function () {
 					"auth_token": factory.token ,
 					"lead": {
 					"lifecycle_stage": 2,
-					"opportunity": true
+					"opportunity": true}
 					})
 				.reply(200);
 		});
 
 		it('should call the API with correct parameters', function (done) {
-			var leads = new lib.leads(factory.token);
-			leads.changeStatusToQualified(factory.lead.email, true)
+			var leads = new lib.Leads(factory.token);
+			leads.changeStatusToClient(factory.lead.email, true)
 				.then(function () {
 					done();
 				})
