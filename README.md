@@ -80,7 +80,7 @@ conversions.createConversion('action-name', {
 ```js
 var email = 'email@example.com';
 var opportunity = false; 
-leads.chageStatusToLead(email, opportunity).then(function (data) {
+leads.changeStatusToLead(email, opportunity).then(function (data) {
     console.log('Request done ', data);
 })
 .catch(function (err) {
@@ -92,7 +92,7 @@ leads.chageStatusToLead(email, opportunity).then(function (data) {
 ```js
 var email = 'email@example.com';
 var opportunity = false; 
-leads.chageStatusToQualified(email, opportunity).then(function (data) {
+leads.changeStatusToQualified(email, opportunity).then(function (data) {
     console.log('Request done ', data);
 })
 .catch(function (err) {
@@ -105,7 +105,7 @@ leads.chageStatusToQualified(email, opportunity).then(function (data) {
 ```js
 var email = 'email@example.com';
 var opportunity = false; 
-leads.chageStatusToClient(email, opportunity).then(function (data) {
+leads.changeStatusToClient(email, opportunity).then(function (data) {
     console.log('Request done ', data);
 })
 .catch(function (err) {
