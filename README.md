@@ -62,7 +62,7 @@ services.dealLost(reason, null, leadId)
 ```js
 var identifier = 'action-name';
 
-conversions.createConversion('action-name', {
+conversions.createConversion(identifier, {
     email: 'email@example.com',
     nome: 'Lead name',
 }).then(function (data) {
